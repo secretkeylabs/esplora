@@ -66,3 +66,8 @@ RUN apt-get --auto-remove remove -yqq --purge manpages \
  && rm -rf /usr/share/doc* /usr/share/man /usr/share/postgresql/*/man /var/lib/apt/lists/* /var/cache/* /tmp/* /root/.cache /*.deb /root/.cargo
 
 WORKDIR /srv/explorer
+
+EXPOSE 50001 80
+
+VOLUME ["$PWD/data_bitcoin_mainnet:/data"]
+
